@@ -54,7 +54,7 @@ namespace ClassicModels.Models
                 }
                 catch (Exception ex)
                 {
-                    Log.Error("SELECT failed in ProductRepository method 'ProductsByCategory'. " + ex.Message);
+                    Log.Error("SELECT failed in ProductRepository method 'ProductLine'. " + ex.Message);
                 }
             }
 
@@ -78,7 +78,7 @@ namespace ClassicModels.Models
                 }
                 catch (Exception ex)
                 {
-                    Log.Error("SELECT failed in ProductRepository method 'SingleProduct'. " + ex.Message);
+                    Log.Error("SELECT failed in ProductRepository method 'Product'. " + ex.Message);
                 }
             }
 
