@@ -1,0 +1,35 @@
+@model ClassicModels.Models.ProductLineViewModel
+@{
+    Layout = "_Layout";
+}
+
+@if (!string.IsNullOrEmpty(Model.product.ProductCode))
+{
+    <div class="row">
+        <div class="col-md-2">
+            <a href="/ProductLine/@Model.product.ProductLineId">Back to @Model.product.ProductLine</a>
+        </div>
+
+        <div class="col-md-3 order-last">
+            <img src="~/images/ClassicModels/placeholder.png" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-md-7">
+            <strong>@Model.product.ProductVendor</strong>
+
+            <h2>@Model.product.ProductName</h2>
+
+            <ul>
+                <li>Scale: @Model.product.ProductScale</li>
+                <li>Price: @Model.product.FormatPrice()</li>
+            </ul>
+
+            <p>@Model.product.ProductDescription</p>
+
+            <div class="buy-buttons">
+                <a href="/Cart/Product/@Model.product.ProductCode" class="btn btn-outline-primary">Add to Cart</a>
+                <a href="/Cart/Product/@Model.product.ProductCode" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+    </div>
+}

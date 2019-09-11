@@ -1,0 +1,60 @@
+
+@if (Model.ProductLineId == 0)
+{
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-1">Classic Models</h1>
+            <h4>ASP.Net Core Demo</h4>
+        </div>
+    </div>
+}
+else if (Model.ProductLineId > 0)
+{
+    var bannerClass = "banner-generic";
+
+    switch (Model.ProductLineId)
+    {
+        case 1:
+            bannerClass = "banner-classic";
+            break;
+
+        case 2:
+            bannerClass = "banner-motorcyles";
+            break;
+
+        case 3:
+            bannerClass = "banner-planes";
+            break;
+
+        case 4:
+            bannerClass = "banner-ships";
+            break;
+
+        case 5:
+            bannerClass = "banner-trains";
+            break;
+
+        case 6:
+            bannerClass = "banner-trucks";
+            break;
+
+        case 7:
+            bannerClass = "banner-vintage";
+            break;
+
+        default:
+            bannerClass = "banner-generic";
+            break;
+    }
+
+    if (Model.product != null)
+    {
+        bannerClass = "banner-generic";
+    }
+
+    <div class="jumbotron jumbotron-fluid banner @bannerClass">
+        <div class="container">
+            <h1 class="display-1">@Model.PageTitle</h1>
+        </div>
+    </div>
+}

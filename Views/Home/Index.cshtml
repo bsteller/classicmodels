@@ -1,0 +1,18 @@
+﻿@model ClassicModels.Models.ProductLineViewModel;
+@{
+    Layout = "_Layout";
+}
+
+
+@foreach (var pl in Model.ProductLines)
+{
+    <div class="row cat-desc">
+        <div class="col-md-3">
+            <a href="/ProductLine/@pl.ProductLineId"><img src="~/images/ClassicModels/@pl.Image" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-md-9">
+            <h4><a href="/ProductLine/@pl.ProductLineId">@pl.ProductLine</a></h4>
+            <p>@pl.TextDescription</p>
+        </div>
+    </div>
+}

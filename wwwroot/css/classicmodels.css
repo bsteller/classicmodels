@@ -1,0 +1,174 @@
+﻿html, body {
+    height: 100%;
+    position: relative;
+}
+#grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 100%;
+}
+main.container {
+    flex-grow: 2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.admin {
+    align-self: flex-end;
+}
+/*---------------
+Home
+----------------*/
+.jumbotron {
+    background-image: url("../images/ClassicModels/home2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    color: #fff;
+    height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 0;
+}
+.banner .display-1,
+.jumbotron .display-1 {
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+    margin-top: .5em;
+}
+.jumbotron h4 {
+    font-size: 1em;
+    font-weight: bold;
+}
+.cat-desc {
+    margin-bottom: 1em;
+}
+.jumbotron.banner-classic {background-position:center center; background-image: url("../images/ClassicModels/banners/classic.jpg");}
+.jumbotron.banner-motorcyles {background-position:center center; background-image: url("../images/ClassicModels/banners/motorcycles.jpg");}
+.jumbotron.banner-planes {background-position:center center; background-image: url("../images/ClassicModels/banners/planes.jpg");}
+.jumbotron.banner-ships {background-position:center center; background-image: url("../images/ClassicModels/banners/ships.jpg");}
+.jumbotron.banner-trains {background-position:center center; background-image: url("../images/ClassicModels/banners/trains.jpg");}
+.jumbotron.banner-trucks {background-position:center center; background-image: url("../images/ClassicModels/banners/trucks.jpg");}
+.jumbotron.banner-vintage {background-position:center center; background-image: url("../images/ClassicModels/banners/vintage.jpg");}
+.jumbotron.banner-generic {
+    background-position:center center;
+    background-image: none;
+    background-color: black;
+    max-height: 200px;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:550px) {
+    .jumbotron.banner {
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:550px) {
+    .banner .display-1,
+    .jumbotron .display-1 {
+        font-size: 4vw;
+    }
+    .jumbotron h4 {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .jumbotron {
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .jumbotron {
+        background-position: center 20%;
+        background-size: cover;
+        height: 350px;
+    }
+    .banner .display-1,
+    .jumbotron .display-1 {
+        font-size: 45px;
+        margin-top: .25em;
+    }
+    .jumbotron h4 {
+        font-size: 28px;
+    }
+}
+/*---------------
+Navbar
+----------------*/
+@media screen and (min-width:768px) {
+    .navbar-expand-md .navbar-nav {
+        flex-wrap: wrap;
+    }
+}
+/*---------------
+Category
+----------------*/
+.category-products {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-gap: 1em;
+}
+.category-product a img {
+    border: 0;
+}
+.category-product {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+}
+.category-product h5 {
+    margin: 0 0 .5rem 0;
+}
+.category-product img {
+    height: 100%;
+    max-height:125px;
+    width: auto;
+    display: block;
+    margin: 0 auto .25em auto;
+}
+.category-product ul {
+    flex-grow: 1;
+    list-style: none;
+    margin:0 0 1em 0;
+    padding:0;
+}
+.category-product-btn {
+    text-align: center;
+}
+@media screen and (min-width:576px) {
+    .category-products {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (min-width:992px) {
+    .category-products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .category-products.home {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width:1200px) {
+    .category-products {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+/*---------------
+Product
+----------------*/
+.buy-buttons {
+    margin-bottom: 1em;
+}

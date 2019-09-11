@@ -1,0 +1,22 @@
+@model ClassicModels.Models.ProductLineViewModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="category-products">
+    @foreach (var product in Model.products)
+    {
+        <div class="category-product">
+            <a href="/ProductLine/@product.ProductLineId/Product/@product.ProductCode"><img src="~/images/ClassicModels/placeholder.png" alt=""></a>
+            <h5>@product.ProductName</h5>
+            <strong>@product.ProductVendor</strong>
+            <ul>
+                <li>Scale: @product.ProductScale</li>
+                <li>Price: @product.FormatPrice()</li>
+            </ul>
+            <div class="category-product-btn">
+                <a href="/ProductLine/@product.ProductLineId/Product/@product.ProductCode" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    }
+</div><!-- end category-products -->

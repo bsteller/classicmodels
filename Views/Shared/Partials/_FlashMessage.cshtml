@@ -1,0 +1,8 @@
+﻿@if (Model.flashMessage.Status == "Success")
+{
+    <div class="alert alert-success">@Model.flashMessage.Message</div>
+}
+else if (Model.flashMessage.Status == "Error")
+{
+    <div class="alert alert-danger">@Model.flashMessage.Message</div>
+}
